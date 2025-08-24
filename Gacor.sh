@@ -58,9 +58,9 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
 rm -f /usr/bin/user
-username=$(curl https://raw.githubusercontent.com/BangJalii18/jali/main/ip | grep $MYIP | awk '{print $2}')
+username=$(curl https://github.com/BangJalii18/JaliJall/raw/refs/heads/main/ip | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
-expx=$(curl https://raw.githubusercontent.com/BangJalii18/jali/main/ip | grep $MYIP | awk '{print $3}')
+expx=$(curl https://github.com/BangJalii18/JaliJall/raw/refs/heads/main/ip | grep $MYIP | awk '{print $3}')
 echo "$expx" >/usr/bin/e
 username=$(cat /usr/bin/user)
 oid=$(cat /usr/bin/ver)
@@ -79,7 +79,7 @@ mai="datediff "$Exp" "$DATE""
 Info="(${green}Active${NC})"
 Error="(${RED}ExpiRED${NC})"
 today=`date -d "0 days" +"%Y-%m-%d"`
-Exp1=$(curl https://raw.githubusercontent.com/BangJalii18/jali/main/ip | grep $MYIP | awk '{print $4}')
+Exp1=$(curl https://github.com/BangJalii18/JaliJall/raw/refs/heads/main/ip | grep $MYIP | awk '{print $4}')
 if [[ $today < $Exp1 ]]; then
 sts="${Info}"
 else
@@ -87,7 +87,7 @@ sts="${Error}"
 fi
 echo -e "\e[32mloading...\e[0m"
 clear
-REPO="https://raw.githubusercontent.com/BangJalii18/jali/main/"
+REPO="https://raw.githubusercontent.com/BangJalii18/JaliJall/refs/heads/main/"
 start=$(date +%s)
 secs_to_human() {
 echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
@@ -252,8 +252,8 @@ fi
 }
 clear
 restart_system() {
-USRSC=$(wget -qO- https://raw.githubusercontent.com/BangJalii18/jali/main/ip | grep $ipsaya | awk '{print $2}')
-EXPSC=$(wget -qO- https://raw.githubusercontent.com/BangJalii18/jali/main/ip | grep $ipsaya | awk '{print $3}')
+USRSC=$(wget -qO- https://raw.githubusercontent.com/BangJalii18/JaliJall/refs/heads/main/ip | grep $ipsaya | awk '{print $2}')
+EXPSC=$(wget -qO- https://raw.githubusercontent.com/BangJalii18/JaliJall/refs/heads/main/ip | grep $ipsaya | awk '{print $3}')
 domain=$(cat /root/domain)
 userdel jame > /dev/null 2>&1
 Username="g"
@@ -440,7 +440,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Service Limit Quota"
-wget https://raw.githubusercontent.com/BangJalii18/jali/main/Fls/limit.sh && chmod +x limit.sh && ./limit.sh
+wget https://raw.githubusercontent.com/BangJalii18/JaliJall/refs/heads/main/Fls/limit.sh && chmod +x limit.sh && ./limit.sh
 
 cd
 wget -q -O /usr/bin/limit-ip "${REPO}Fls/limit-ip"
