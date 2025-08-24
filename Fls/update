@@ -67,4 +67,4 @@ echo -e ""
 echo -e "\033[92;1m Wait in 2 second...\033[0m"
 sleep 2
 #read -n 1 -s -r -p "Press [ Enter ] to back on menu"
-welcome
+
